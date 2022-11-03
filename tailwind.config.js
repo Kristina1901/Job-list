@@ -10,7 +10,9 @@ module.exports = {
       shadу: "2px 1px 7px rgba(0, 0, 0, 0.08), 0px 2px 1px -1px rgba(0, 0, 0, 0.04), 0px 1px 3px rgba(0, 0, 0, 0.12)",
       arrowColor: "#7D859C",
       buttonColor: "#70778B",
-      link:'#55699E'
+      link:'#55699E',
+      button:"#384564",
+      time: 'rgba(56, 65, 93, 0.355988)'
       
       
     },
@@ -20,12 +22,17 @@ module.exports = {
       'rate':  "url('../img/star.svg')",
       'mobileRate':  "url('../img/mobileStar.svg')",
       'sepator':  "url('../img/separator.svg')",
+      'dots': "url('../img/dots.svg')",
+      'list': "url('../img/detailList.svg')"
       
    },
    fontSize: {
     job: '28px',
     
-  }
+  },
+  fontFamily: {
+    'sans':'Roboto',
+  },
   }
   },
   plugins: [],
