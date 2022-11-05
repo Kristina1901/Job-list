@@ -37,8 +37,8 @@ const Map: React.FC<Props> =({jobOneValue})=>  {
   
   return (
     <div>
-    <div className="bg-mapColor h-[218px] w-[402px] bg-circle bg-no-repeat bg-left bg-auto flex justify-center items-center flex-col rounded-t-lg">
-      <div className="w-[277px]">
+    <div className="bg-mapColor h-[218px] w-[100%] bg-circle bg-no-repeat bg-left bg-auto flex justify-center items-center flex-col rounded-t-lg">
+      <div className="w-[100%]">
       <p className="text-mapText text-xl font-bold text-start mb-2">{jobOneValue && jobOneValue.name}</p>
       <p className="text-mapText font-sans text-start mb-2 font-normal text-lg"><span></span>{jobOneValue && jobOneValue.address}</p>
       <p className="text-mapText font-sans text-start mb-2 font-normal text-lg">{jobOneValue && jobOneValue.phone}</p>
