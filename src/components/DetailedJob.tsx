@@ -50,7 +50,7 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
   }
 
   return (
-    <div className="container h-full w-full bg-red pb-9 pt-6 px-4 lg:pt-7 mg:pt-7 lg:px-0 mg:pb-16 lg:pb-16 lg:flex lg:justify-between lg:gap-x-[10.3%] mx-auto ">
+    <div className="container mx-auto w-full pb-7 pt-2 px-2.5 lg:w-[73%] lg:pt-7 md:w-[73%] md:pt-7 lg:px-0 md:pb-16 lg:pb-16 lg:flex lg:justify-between lg:gap-x-[10.3%]">
       <div className="flex flex-col mb-[63px] lg:mb-0 mg:mb-0">
         <section className="pl-5 order-1">
           <div className="w-full relative lg:border-b-2 border-#3A4562 mg:border-b-2 border-#3A4562 mg:flex mg:justify-between lg:flex lg:justify-between">
