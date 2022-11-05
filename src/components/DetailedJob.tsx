@@ -177,12 +177,12 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
             <p className="text-lg text-headerColor font-sans mb-2.5">
               Benefits
             </p>
-            <ul className="flex">
+            <ul className="flex flex-wrap lg:flex-nowrap">
               {jobOneValue &&
                 jobOneValue.benefits.map((item) => (
                   <li
                     key={nanoid()}
-                    className="text-base text-textBenefits font-bold bg-bcBenefits py-4 mr-2 min-w-[222px] text-center rounded-t-lg rounded-b-lg border-borderColorYel border-y border-x"
+                    className="text-base text-textBenefits mb-2 font-bold bg-bcBenefits py-4 mr-2 min-w-[222px] text-center rounded-t-lg rounded-b-lg border-borderColorYel border-y border-x lg:mb-0"
                   >
                     {item}
                   </li>
