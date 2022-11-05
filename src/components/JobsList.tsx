@@ -10,6 +10,7 @@ interface Job {
   address: string;
   pictures: Array<string>;
   createdAt: string;
+  email: string;
 }
 interface Coordinates {
   lat: number;
@@ -36,9 +37,9 @@ export const JobsList: React.FC<Props> = ({
               <Link
                 to={`./detailedJob/${id}`}
                 state={{ from: location }}
-                className="bg-white rounded-lg mb-[8px] pt-4 pb-7 px-4 w-full lg:py-6 md:py-6 flex flex-col mg:flex-row lg:flex-row gap-y-3.5"
+                className="bg-backgroundColor drop-shadow-md rounded-lg mb-[8px] pt-4 pb-7 px-4 w-full lg:py-6 md:py-6 flex flex-col mg:flex-row lg:flex-row gap-y-3.5 lg:bg-white mg:bg-white"
               >
-                <div className="w-100% lg:w-[75%] mg:w-[75%] flex">
+                <div className="w-100% lg:w-[75%] mg:w-[75%] flex items-center">
                   <div className="h-[66px] w-[66px] rounded-full overflow-hidden lg:h-[85px] lg:w-[85px] mg:h-[85px] mg:w-[85px]">
                     <img
                       src={pictures[2]}
@@ -99,13 +100,10 @@ export const JobsList: React.FC<Props> = ({
             previousClassName={
               "hidden text-2xl text-arrowColor font-bold mr-11 w-8 h-8 text-start pb-1 pr-12 lg:block mg:block"
             }
-            containerClassName="flex bg-white rounded-r-lg rounded-l-lg pl-6 pr-4 pt-3 pb-2.5"
+            containerClassName="flex bg-white rounded-r-lg rounded-l-lg pl-6 pr-4 pt-3 pb-2.5 drop-shadow-md"
             activeClassName="after:content-[''] after:ml-0.5 after:absolute after:top-[25px] after:left-5 after:bg-link after:w-0.5 after:h-7 after:rotate-90"
             previousLinkClassName="pageLinkWord"
-            //   nextClassName={
-            //     currentPage === pagination() ? 'buttonDisable' : 'buttonNext'
-            //   }
-            nextClassName={
+             nextClassName={
               "hidden text-2xl text-arrowColor font-bold mr-2 pl-12 lg:block mg:block ml-7"
             }
           />

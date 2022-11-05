@@ -3,7 +3,7 @@ import "./App.css";
 import { getJobsList } from "../serveces/jobs-api";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { JobsList } from "./JobsList";
-import DetailedJob from "./DetailedJob";
+import {DetailedJob} from "./DetailedJob";
 import { useEffect } from "react";
 interface Job {
   id: string;
@@ -16,6 +16,8 @@ interface Job {
   salary: string;
   benefits: Array<string>;
   employment_type: Array<string>;
+  phone: string;
+  email: string;
 }
 interface Coordinates {
   lat: number;

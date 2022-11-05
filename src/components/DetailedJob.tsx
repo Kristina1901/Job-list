@@ -13,6 +13,8 @@ interface Job {
   salary: string;
   benefits: Array<string>;
   employment_type: Array<string>;
+  phone:string;
+  email: string;
 }
 interface Coordinates {
   lat: number;
@@ -48,11 +50,11 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
   }
 
   return (
-    <div className="container h-full mx-auto w-full bg-red pb-9 pt-6 px-4 lg:w-[65%] lg:pt-7 md:w-[65%] md:pt-7 lg:px-0 md:pb-16 lg:pb-16 flex  justify-between">
-      <div className="flex basis-[58%] flex-col">
-        <section className="pl-5">
-          <div className="flex justify-between w-full border-b-2 border-#3A4562">
-            <h1 className="text-job text-headerColor font-bold">Job Details</h1>
+    <div className="container h-full w-full bg-red pb-9 pt-6 px-4 lg:pt-7 mg:pt-7 lg:px-0 mg:pb-16 lg:pb-16 lg:flex lg:justify-between lg:gap-x-[10.3%] mx-auto ">
+      <div className="flex flex-col mb-[63px] lg:mb-0 mg:mb-0">
+        <section className="pl-5 order-1">
+          <div className="w-full relative lg:border-b-2 border-#3A4562 mg:border-b-2 border-#3A4562 mg:flex mg:justify-between lg:flex lg:justify-between">
+            <h1 className="text-job text-headerColor font-bold border-b-2 border-#3A4562 lg:border-none mg:border-none">Job Details</h1>
             <div className="flex gap-x-8 pt-2">
               <div className="flex items-center gap-x-4">
                 <div className="bg-list bg-no-repeat bg-center bg-auto w-[18px] h-[20px]"></div>
@@ -67,28 +69,28 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
                 </button>
               </div>
             </div>
-          </div>
-          <div className="pt-10">
-            <button className="text-white bg-button py-[18px] px-[30px] rounded-t-lg rounded-b-lg font-semibold text-xs mb-8">
+            </div>
+          <div className="mt-8 lg:mt-10 mg:mt-10">
+            <button className="hidden text-white bg-button py-[18px] px-[30px] rounded-t-lg rounded-b-lg font-semibold text-xs mb-8 mg:block lg:block">
               APPLY NOW
             </button>
-            <div className="flex justify-between mb-2">
-              <h2 className="text-headerColor text-2xl font-bold w-[69.3%] overflow-hidden min-h-[120px]">
+            <div className="flex-col mb-2 mg:justify-between lg:justify-between mg:flex-row lg:flex-row mg:flex lg:flex">
+              <h2 className="text-headerColor text-2xl font-bold lg:w-[69.3%] mg:w-[69.3%] overflow-hidden min-h-[120px]">
                 {jobOneValue && jobOneValue.title}
               </h2>
-              <div className="w-[22.26%]">
-                <p className="font-bold	text-xl text-headerColor">
+              <div className="flex items-end flex-col">
+                <p className="font-bold	text-xl text-headerColor order-2 mg:order-1 lg:order-1 ">
                   {getSalary()}
                 </p>
-                <p className="font-normal text-lg">Brutto, per year</p>
-              </div>
-            </div>
-            <p className="text-lg text-time font-sans mb-2">
+                <p className="font-normal text-lg order-1 mg:order-2 lg:order-2">Brutto, per year</p>
+               </div>
+                </div>
+                <p className="text-lg text-time font-sans relative bottom-[40px] lg:static mg:static lg:mb-2 mg:mb-2">
               Posted{" "}
               {jobOneValue &&
                 moment(jobOneValue.createdAt, "YYYYMMDD").fromNow()}
             </p>
-            <p className="text-lg text-headerColor font-sans mb-10">
+              <p className="text-lg text-headerColor font-sans mb-10 -mt-[28px] lg:mt-0 mg:mt-0">
               At WellStar, we all share common goals. That’s what makes us so
               successful – and such an integral part of our communities. We want
               the same things, for our organization, for our patients, and for
@@ -132,7 +134,7 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
             <p className="text-lg text-headerColor font-sans">
               Our physicians enjoy a wide range of benefits, including:
             </p>
-            <ul className="-ml-5 mb-8">
+            <ul className="lg:-ml-5 mg:-ml-5 mb-8">
               {jobOneValue &&
                 jobOneValue.benefits.map((item) => (
                   <li
@@ -144,12 +146,14 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
                   </li>
                 ))}
             </ul>
+            <div className="flex justify-center lg:justify-start mg:justify-start">
             <button className="text-white bg-button py-[18px] px-[30px] rounded-t-lg rounded-b-lg font-semibold text-xs">
               APPLY NOW
             </button>
+            </div>
           </div>
         </section>
-        <section className="pt-[86px] pl-5">
+        <section className="pt-[86px] pl-5 order-3 lg:order-2 mg:order-2">
           <div className="border-b-2 border-#3A4562 mb-4">
             <h1 className="text-job text-headerColor font-bold mb-2.5">
               Additional info
@@ -186,7 +190,7 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
             </ul>
           </div>
         </section>
-        <section className="pt-[86px] pl-5">
+        <section className="pt-[86px] pl-5 order-2 lg:order-3 mg:order-3">
           <div className="w-full border-b-2 border-#3A4562 mb-3">
             <h1 className="text-job text-headerColor font-bold mb-2.5">
               Attached images
@@ -212,12 +216,11 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
           </button>
         </section>
       </div>
-      <div className="flex basis-1/3">
-        <div className="bg-mapColor"></div>
-        <MapContainer />
+      <div className="flex justify-center">
+        <div className="bg-mapColor bg-mobileRate bg-no-repeat bg-center bg-auto"></div>
+        <MapContainer jobOneValue={jobOneValue}/>
       </div>
     </div>
   );
 };
 
-export default DetailedJob;

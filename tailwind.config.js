@@ -21,8 +21,8 @@ module.exports = {
       borderColorYel:'rgba(255, 207, 0, 0.15)',
       goBackButton: '#D8D8D8',
       mapColor: '#2A3047',
+      mapText: '#E7EAF0'
            
-      
     },
     backgroundImage: {
       'location': "url('../img/location.svg')",
@@ -33,7 +33,8 @@ module.exports = {
       'dots': "url('../img/dots.svg')",
       'list': "url('../img/detailList.svg')",
       'listItem': "url('../img/list.svg')",
-      'arrow':"url('../img/Arrow.svg')"
+      'arrow':"url('../img/Arrow.svg')",
+      'circle': "url('../img/circle.png')"
       
    },
    fontSize: {
@@ -46,7 +47,7 @@ module.exports = {
   listStyleType: {
     square: 'square',
     
-  }
+  },
   }
   },
   plugins: [],
