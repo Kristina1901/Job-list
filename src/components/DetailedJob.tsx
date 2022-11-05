@@ -85,7 +85,7 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
                 <p className="font-normal text-lg order-1 mg:order-2 lg:order-2">Brutto, per year</p>
                </div>
                 </div>
-                <p className="text-lg text-time font-sans relative bottom-[40px] lg:static mg:static lg:mb-2 mg:mb-2">
+                <p className="text-lg text-time font-sans relative bottom-[40px] lg:static mg:static lg:mb-2 mg:mb-2 w-[100px] lg:w-full mg:w-full">
               Posted{" "}
               {jobOneValue &&
                 moment(jobOneValue.createdAt, "YYYYMMDD").fromNow()}
