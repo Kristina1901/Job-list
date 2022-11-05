@@ -50,8 +50,8 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
   }
 
   return (
-    <div className="container mx-auto w-full pb-7 pt-2 px-2.5 lg:w-[73%] lg:pt-7 md:w-[73%] md:pt-7 lg:px-0 md:pb-16 lg:pb-16 lg:flex lg:justify-between lg:gap-x-[10.3%]">
-      <div className="flex flex-col mb-[63px] lg:mb-0 mg:mb-0">
+    <div className="container mx-auto w-full pb-7 pt-2 px-2.5 lg:w-[73%] lg:pt-7 md:w-[73%] md:pt-7 lg:px-0 md:pb-16 lg:pb-16 lg:flex lg:justify-between ">
+      <div className="flex flex-col mb-[63px] lg:mb-0 mg:mb-0 lg:w-[57.4%]">
         <section className="pl-5 order-1">
           <div className="w-full relative lg:border-b-2 border-#3A4562 mg:border-b-2 border-#3A4562 mg:flex mg:justify-between lg:flex lg:justify-between">
             <h1 className="text-job text-headerColor font-bold border-b-2 border-#3A4562 lg:border-none mg:border-none">Job Details</h1>
@@ -163,12 +163,12 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
             <p className="text-lg text-headerColor font-sans mb-2.5">
               Employment type
             </p>
-            <ul className="flex mb-6">
+            <ul className="flex mb-6 flex-wrap lg:flex-nowrap">
               {jobOneValue &&
                 jobOneValue.employment_type.map((item) => (
                   <li
                     key={nanoid()}
-                    className="text-base text-emptype font-bold bg-bcEmptype py-4 mr-2 min-w-[222px] text-center rounded-t-lg rounded-b-lg border-borderColor border-y border-x"
+                    className="text-base mb-2 text-emptype font-bold bg-bcEmptype py-4 mr-2 min-w-[222px] text-center rounded-t-lg rounded-b-lg border-borderColor border-y border-x lg:mb-0"
                   >
                     {item}
                   </li>
@@ -216,7 +216,7 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
           </button>
         </section>
       </div>
-      <div className="flex justify-center">
+      <div className="lg:w-[31.9%]">
         <div className="bg-mapColor bg-mobileRate bg-no-repeat bg-center bg-auto"></div>
         <MapContainer jobOneValue={jobOneValue}/>
       </div>

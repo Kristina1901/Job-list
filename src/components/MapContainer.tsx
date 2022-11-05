@@ -36,7 +36,7 @@ const Map: React.FC<Props> =({jobOneValue})=>  {
   }
   
   return (
-    <div>
+    <div className="w-[100%]">
     <div className="bg-mapColor h-[218px] w-[100%] bg-circle bg-no-repeat bg-left bg-auto flex justify-center items-center flex-col rounded-t-lg">
       <div className="flex justify-start flex-col">
       <p className="text-mapText text-xl font-bold text-start mb-2">{jobOneValue && jobOneValue.name}</p>
@@ -49,7 +49,7 @@ const Map: React.FC<Props> =({jobOneValue})=>  {
     <GoogleMap
       zoom={10}
       center={center}
-      mapContainerClassName="h-[218px] w-[402px] rounded-b-lg bg-mapColor"
+      mapContainerClassName="h-[218px] w-[100%] rounded-b-lg bg-mapColor"
     >
       <Marker position={{ lat: jobOneValue.location.lat, lng: jobOneValue.location.long }} />
     </GoogleMap>
