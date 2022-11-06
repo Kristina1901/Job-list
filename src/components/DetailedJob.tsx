@@ -49,10 +49,8 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
   function getridofNull() {
     if (jobOneValue === undefined) {
       let jobValue = JSON.parse(localStorage.getItem(id));
-      console.log(jobValue);
       return jobValue;
     } else {
-      console.log(jobOneValue);
       return jobOneValue;
     }
   }

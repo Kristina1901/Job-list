@@ -31,7 +31,7 @@ module.exports = {
       'post': "url('../img/post.svg')",
       'rate':  "url('../img/star.svg')",
       'mobileRate':  "url('../img/mobileStar.svg')",
-      'sepator':  "url('../img/separator.svg')",
+      'separator':  "url('../img/separator.svg')",
       'dots': "url('../img/dots.svg')",
       'list': "url('../img/detailList.svg')",
       'listItem': "url('../img/list.svg')",

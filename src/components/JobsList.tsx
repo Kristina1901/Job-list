@@ -84,8 +84,8 @@ export const JobsList: React.FC<Props> = ({
           ))}
         </ul>
         <div className="flex justify-center">
-          <div className="hidden bg-sepator bg-no-repeat bg-center bg-auto w-px р-8px relative left-14 lg:block mg:block'"></div>
-          <ReactPaginate
+        <div className="bg-separator bg-no-repeat bg-center bg-auto relative left-14 lg:w-px lg:р-8px mg:w-px mg:р-8px z-10"></div>
+         <ReactPaginate
             previousLabel={"<"}
             nextLabel={">"}
             breakLabel={"..."}
@@ -103,11 +103,11 @@ export const JobsList: React.FC<Props> = ({
             containerClassName="flex bg-white rounded-r-lg rounded-l-lg pl-6 pr-4 pt-3 pb-2.5 drop-shadow-md"
             activeClassName="after:content-[''] after:ml-0.5 after:absolute after:top-[25px] after:left-5 after:bg-link after:w-0.5 after:h-7 after:rotate-90"
             previousLinkClassName="pageLinkWord"
-            nextClassName={
+             nextClassName={
               "hidden text-2xl text-arrowColor font-bold mr-2 pl-12 lg:block mg:block ml-7"
             }
           />
-          <div className="bg-sepator bg-no-repeat bg-center bg-auto relative right-14 lg:w-px lg:р-8px mg:w-px mg:р-8px'"></div>
+          <div className="bg-separator bg-no-repeat bg-center bg-auto relative right-14 lg:w-px lg:р-8px mg:w-px mg:р-8px"></div>
         </div>
       </div>
     </div>
