@@ -5,6 +5,7 @@ import { Routes, Route, Navigate } from "react-router-dom";
 import { JobsList } from "./JobsList";
 import { DetailedJob } from "./DetailedJob";
 import { useEffect } from "react";
+
 interface Job {
   id: string;
   title: string;
@@ -26,10 +27,12 @@ interface Coordinates {
 interface CurrentPage {
   selected: number;
 }
+
 const App: React.FC = () => {
   const [listJobs, setListJobs] = React.useState<Array<Job>>([]);
   const [page, setPage] = React.useState<number>(1);
   const [jobOneValue, setjobOneValue] = React.useState<Job>();
+
   useEffect(() => {
     getJobsList(page).then((data) => {
       setListJobs(data);
@@ -40,9 +43,9 @@ const App: React.FC = () => {
     setPage(num);
   };
   function getJob(key: string) {
-    let newArray = listJobs.find((item) => item.id === key);
-    localStorage.setItem(key, JSON.stringify(newArray));
-    setjobOneValue(newArray);
+    let jobItem = listJobs.find((item) => item.id === key);
+    localStorage.setItem(key, JSON.stringify(jobItem));
+    setjobOneValue(jobItem);
   }
   return (
     <>
@@ -57,8 +60,7 @@ const App: React.FC = () => {
             />
           }
         />
-
-        <Route
+         <Route
           path="/detailedJob/:id"
           element={<DetailedJob jobOneValue={jobOneValue} />}
         />

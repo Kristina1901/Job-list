@@ -36,14 +36,13 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
     navigate(location?.state?.from ?? "/");
   };
   function getSalary() {
-    let str = getridofNull().salary;
-    if (str.includes("k")) {
-      let newStr = parseInt(str.replace(/[^\d]/g, ""));
-      let newString = String(newStr);
-      Array.from(newString);
-      let firstNumbers = newString.slice(0, 2);
-      let secondNumbers = newString.slice(2, 4);
-      return `€ ${firstNumbers} 000\u2013${secondNumbers} 000`;
+    let valueSalary = getridofNull().salary;
+    if (valueSalary.includes("k")) {
+      let valueSalaryString = parseInt(valueSalary.replace(/[^\d]/g, ""));
+      let newString = String(valueSalaryString);
+      let firstValueSalary = newString.slice(0, 2);
+      let secondValueSalary = newString.slice(2, 4);
+      return `€ ${firstValueSalary} 000\u2013${secondValueSalary} 000`;
     }
   }
   function getridofNull() {
@@ -60,9 +59,9 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
       <div className="flex flex-col mb-[63px] lg:mb-0 mg:mb-0 lg:w-[57.4%] lg:pl-5 mg:pl-5">
         <section className="order-1">
           <div className="w-full relative lg:border-b-2 border-#3A4562 mg:border-b-2 border-#3A4562 mg:flex mg:justify-between lg:flex lg:justify-between">
-            <h1 className="text-job text-headerColor font-bold border-b-2 border-#3A4562 lg:border-none mg:border-none pb-2.5 lg:pb-1 mg:pb-1">
+            <h2 className="text-job text-headerColor font-bold border-b-2 border-#3A4562 lg:border-none mg:border-none pb-2.5 lg:pb-1 mg:pb-1">
               Job Details
-            </h1>
+            </h2>
             <div className="flex gap-x-8 pt-2">
               <div className="flex items-center gap-x-4">
                 <div className="bg-list bg-no-repeat bg-center bg-auto w-[18px] h-[20px]"></div>
@@ -162,9 +161,9 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
         </section>
         <section className="pt-[55px] order-3 lg:order-2 mg:order-2 lg:pt-[86px] mg:pt-[86px]">
           <div className="border-b-2 border-#3A4562 mb-4">
-            <h1 className="text-job text-headerColor font-bold mb-2.5">
+            <h2 className="text-job text-headerColor font-bold mb-2.5">
               Additional info
-            </h1>
+            </h2>
           </div>
           <div>
             <p className="text-lg text-headerColor font-sans mb-2">
@@ -197,9 +196,9 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
         </section>
         <section className="pt-[135px] order-2 lg:order-3 mg:order-3 lg:pt-[86px] mg:pt-[86px]">
           <div className="w-full border-b-2 border-#3A4562 mb-3">
-            <h1 className="text-job text-headerColor font-bold mb-2.5">
+            <h2 className="text-job text-headerColor font-bold mb-2.5">
               Attached images
-            </h1>
+            </h2>
           </div>
           <ul className="flex mb-0 lg:mb-[98px] mg:mb-[98px]">
             {getridofNull().pictures.map((item: string) => (
@@ -222,9 +221,9 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
       </div>
       <div className="lg:w-[31.9%] px-1 lg:px-0 mg:px-0">
         <div className="border-b-2 border-#3A4562 mb-6 lg:hidden mb:hidden">
-          <h1 className="text-job text-headerColor font-bold mb-2.5">
+          <h2 className="text-job text-headerColor font-bold mb-2.5">
             Contacts
-          </h1>
+          </h2>
         </div>
         <div className="bg-mapColor bg-mobileRate bg-no-repeat bg-center bg-auto"></div>
         <MapContainer jobOneValue={getridofNull()} />
