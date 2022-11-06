@@ -86,7 +86,7 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
             </button>
             <div className="flex-col mb-2 mg:justify-between lg:justify-between mg:flex-row lg:flex-row mg:flex lg:flex">
               <h2 className="text-headerColor mb-1 text-2xl font-bold lg:w-[69.3%] mg:w-[69.3%] overflow-hidden min-h-[120px] lg:md-0 mg:mb-0">
-                {jobOneValue && jobOneValue.title}
+                {getridofNull().title}
               </h2>
               <div className="flex items-end flex-col">
                 <p className="font-bold	text-xl text-headerColor order-2 mg:order-1 lg:order-1 ">
