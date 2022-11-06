@@ -1,6 +1,6 @@
 import React from "react";
 import "./App.css";
-import { getJobsList } from "../serveces/jobs-api";
+import { getJobsList } from "../services/jobs-api";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { JobsList } from "./JobsList";
 import { DetailedJob } from "./DetailedJob";
