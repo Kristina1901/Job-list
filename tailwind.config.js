@@ -22,6 +22,8 @@ module.exports = {
       goBackButton: '#D8D8D8',
       mapColor: '#2A3047',
       mapText: '#E7EAF0'
+     
+
            
     },
     backgroundImage: {

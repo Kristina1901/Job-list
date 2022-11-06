@@ -3,7 +3,7 @@ import "./App.css";
 import { getJobsList } from "../serveces/jobs-api";
 import { Routes, Route, Navigate } from "react-router-dom";
 import { JobsList } from "./JobsList";
-import {DetailedJob} from "./DetailedJob";
+import { DetailedJob } from "./DetailedJob";
 import { useEffect } from "react";
 interface Job {
   id: string;
@@ -41,6 +41,7 @@ const App: React.FC = () => {
   };
   function getJob(key: string) {
     let newArray = listJobs.find((item) => item.id === key);
+    localStorage.setItem(key, JSON.stringify(newArray));
     setjobOneValue(newArray);
   }
   return (
