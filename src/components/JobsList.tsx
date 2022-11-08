@@ -45,7 +45,7 @@ export const JobsList: React.FC<Props> = ({
                     className="w-full odject-contain"
                   />
                 </div>
-                <div className="w-[79%] ml-5 mg:w-[95%] lg:w-[95%] lg:ml-7 mg:ml-7">
+                <div className="w-[79%] ml-5 mg:w-[80%] lg:w-[80%] lg:ml-7 mg:ml-7">
                   <div className="lg:w-[74%] mg:w-[74%]">
                     <Link to={`./detailedJob/${id}`} state={{ from: location }}>
                       <p
