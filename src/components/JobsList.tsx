@@ -103,7 +103,7 @@ export const JobsList: React.FC<Props> = ({
               "hidden text-2xl text-arrowColor font-bold mr-11 w-8 h-8 text-start pb-1 pr-12 lg:block mg:block"
             }
             containerClassName="flex bg-white rounded-r-lg rounded-l-lg pl-6 pr-4 pt-3 pb-2.5 drop-shadow-md"
-            activeClassName="after:content-[''] after:ml-0.5 after:absolute after:top-[25px] after:left-5 after:bg-link after:w-0.5 after:h-7 after:rotate-90"
+            activeClassName="after:content-[''] after:ml-0.5 after:absolute after:top-[28px] after:left-5 after:bg-link after:w-0.5 after:h-7 after:rotate-90"
             previousLinkClassName="pageLinkWord"
             nextClassName={
               "hidden text-2xl text-arrowColor font-bold mr-2 pl-12 lg:block mg:block ml-7"
