@@ -219,14 +219,16 @@ export const DetailedJob: React.FC<Props> = ({ jobOneValue }) => {
           </button>
         </section>
       </div>
-      <div className="lg:w-[31.9%] px-1 lg:px-0 mg:px-0">
+      <div className="lg:w-[31.9%]">
         <div className="border-b-2 border-#3A4562 mb-6 lg:hidden mb:hidden">
           <h2 className="text-job text-headerColor font-bold mb-2.5">
             Contacts
           </h2>
         </div>
         <div className="bg-mapColor bg-mobileRate bg-no-repeat bg-center bg-auto"></div>
+        <div className="px-1 lg:px-0 mg:px-0">
         <MapContainer jobOneValue={getridofNull()} />
+        </div>
       </div>
     </div>
   );
